@@ -1,27 +1,27 @@
+This document is intended to be a technical overview of [Sapling](https://z.cash/upgrade/sapling.html), a major network upgrade for Zcash which is [slated to activate](https://z.cash/support/schedule.html) in November 2018.
+
+* **This is not a user guide.** If you're a user or business, please refer to the [Sapling Upgrade](https://z.cash/upgrade/sapling.html) documentation instead.
+* **This is not a specification.** Please refer to the [Zcash Protocol Specification](https://github.com/zcash/zips/blob/master/protocol/sapling.pdf) and [ZIP243](https://github.com/zcash/zips/blob/master/zip-0243.rst) for a more thorough description of the changes involved in the Sapling upgrade.
+
+------------------------------------------------
+
 # Introduction
 
-Zcash is a cryptocurrency that focuses on using advanced cryptography to protect user privacy. Over time, Zcash will perform network upgrades which change the rules and behavior of the network, requiring users to opt-in to changes by keeping their software up-to-date.
+Zcash is a cryptocurrency which uses cutting-edge cryptography to provide users with strong privacy guarantees. Over time, the Zcash network will undergo **network upgrades** in order to add features and improve the network. We like to use codenames to describe our major releases and network upgrades:
 
-1. describe network upgrades and name things
+### Sprout
 
+**Sprout** was the initial release of Zcash in 2016. Zcash's protocol is built on top of a fork of Bitcoin's code. Just as in Bitcoin, users typically send and receive money with **payment addresses**. The original release of Zcash included two kinds of payment addresses:
 
+* **Transparent addresses** are identical to the traditional Bitcoin-style addresses. Payments to and from transparent addresses publicly reveal the contents of your transaction, such as the value, origin and destination of funds.
+* **Shielded addresses** are payment addresses which use a variant of the [Zerocash protocol](http://zerocash-project.org/) to allow users to keep the value, origin and destination of funds completely private.
 
+### Overwinter
 
-Zcash's protocol is built on top of a fork of Bitcoin's code, and so much of the functionality of Bitcoin is still available to users. Users typically send and receive funds between **addresses**. Bitcoin-style addresses in Zcash are called **transparent addresses** as their transaction contents (such as the value, source and destination of funds) are published on the blockchain. These transparent addresses rely on the same mechanisms that Bitcoin uses: a UTXO model, and authorization using ECDSA signatures.
+**Overwinter** is Zcash's first network upgrade. It makes some changes to the protocol which make future network upgrades simpler. It is slated to activate in June 2018.
 
-Zcash also includes **shielded addresses**. Payments to and from shielded addresses are kept completely private using a variant of the [Zerocash protocol](http), and so all of the aforementioned properties are kept hidden. It [gets messy](http) when payments involve both transparent and shielded addresses, but transactions involving only shielded addresses have incredibly strong privacy guarantees.
+### Sapling
 
-## Network Upgrades
+**Sapling** is a major network upgrade that is expected to activate in November 2018. The primary goal of this upgrade is to improve the performance of shielded addresses so that they can become ubiquitous in the ecosystem. In order to do this, we need to make payments involving these addresses much more efficient. This requires using some improved cryptographic tools and a new kind of shielded address.
 
-Zcash will occasionally perform network upgrades to augment the features and capabilities of the system, requiring users to use the latest software to elect to participate in the new network.
-
-
-
-One of the goals of the Sapling network upgrade is to make shielded addresses ubiquitous, which would allow us to remove transparent addresses from the protocol entirely. In order to do this, we need to make payments involving these addresses much more efficient. This requires the design of a new form of shielded address.
-
-* What is Zcash?
-* What is Sprout, what is Overwinter, and what is Sapling?
-* Audits?
-* Goals of Sapling
-* Sapling Specification
-
+Sapling is one step toward removing transparent addresses from the protocol entirely, although that will not take place in the Sapling upgrade.
