@@ -20,6 +20,6 @@ Most of the mistakes surrounding concrete instantiations of Zerocash-like protoc
 2. Nullifiers must be computed using a PRF, so that they are indistinguishable from each other.
 3. The PRF for computing the nullifier must be keyed on secrets only the spender knows. Otherwise, the original creator of the note can compute the nullifier and see when it is spent.
 4. The PRF must also be collision-resistant. Otherwise, an adversary could create multiple notes with the same nullifier, spending one to ensure the others cannot be spent. This is referred to as a sniping attack.
-5. The inputs to the nullifier computation should be unique to each note, so that the final nullifier is different for every note in the tree. This prevents a so-called *Faerie gold attack* which would allow an adversary to send two payments to a recipient, of which only one can be spent.
+5. The inputs to the nullifier computation should be unique to each note, so that the final nullifier is different for every note in the tree. This prevents a *Faerie gold attack* (discovered by Zooko Wilcox) which would allow an adversary to send two payments to a recipient, of which only one can be spent.
 
 It's also necessary to defend against malleability attacks where parts of the shielded components of transactions are relocated into other transactions, which would allow for theft. We solve this using digital signatures with ephemeral keys that are bound to the proofs.
