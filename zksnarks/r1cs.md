@@ -11,7 +11,7 @@ In order to explain how zk-SNARKs work, we'll borrow notation common in the Bull
 
 ## R1CS
 
-zk-SNARKs are zero-knowledge proofs which allow us to prove that we performed a computation $$f(x, w)$$ over some witness $$w$$ without revealing that witness. We express our computations in the form of arithmetic constraint systems.
+zk-SNARKs are zero-knowledge proofs which allow us to prove that we performed a computation $$f(p, w)$$ over some witness $$w$$ without revealing that witness. We express our computations in the form of arithmetic constraint systems.
 
 Given an assignment $$\textbf{z}$$ of variables in $$\mathbb{F}_q$$, a **rank-1 constraint system** is a system of quadratic constraints of the form $$a \cdot b = c$$, where $$a, b, c$$ are linear combinations of our variable assignment. If we always set $$z_0 = 1$$, then these constraint systems can express any bounded computation.
 
@@ -33,10 +33,10 @@ All of the terms of the constraint system are linear combinations of every varia
 * $$(\phantom{-}0z_1 + \phantom{-}1z_2 + \phantom{-}0z_3) \cdot (\phantom{-}0z_1 + \phantom{-}1z_2 + \phantom{-}0z_3) = (\phantom{-}0z_1 + \phantom{-}1z_2 + \phantom{-}0z_3)$$
 * $$(\phantom{-}2z_1 + \phantom{-}0z_2 + \phantom{-}0z_3) \cdot (\phantom{-}0z_1 + \phantom{-}1z_2 + \phantom{-}0z_3) = (\phantom{-}1z_1 + \phantom{-}1z_2 + -1z_3)$$
 
-Let's begin to describe our constraint system generally, using inner product notation:
+Let's begin to describe our constraint system using the inner product notation and coefficients represented by fixed vectors $$\textbf{a}, \textbf{b}, \textbf{c}$$:
 
 * $$\langle \textbf{a}_0, \textbf{z} \rangle \cdot \langle \textbf{b}_0, \textbf{z} \rangle = \langle \textbf{c}_0, \textbf{z} \rangle$$
 * $$\langle \textbf{a}_1, \textbf{z} \rangle \cdot \langle \textbf{b}_1, \textbf{z} \rangle = \langle \textbf{c}_1, \textbf{z} \rangle$$
 * $$\langle \textbf{a}_2, \textbf{z} \rangle \cdot \langle \textbf{b}_2, \textbf{z} \rangle = \langle \textbf{c}_2, \textbf{z} \rangle$$
 
-Generally, our goal is to demonstrate that we know a satisfying assignment $$\textbf{z} = (1, \textbf{x}, \textbf{w})$$ for which $$\langle \textbf{a}_i, \textbf{z} \rangle \cdot \langle \textbf{b}_i, \textbf{z} \rangle = \langle \textbf{c}_i, \textbf{z} \rangle$$ holds for all $$i$$ given fixed coefficients $$\textbf{a}, \textbf{b}, \textbf{c}$$.
+More generally, our goal is to demonstrate that we know a satisfying assignment $$\textbf{z} = (1, \textbf{p}, \textbf{w})$$ for which $$\langle \textbf{a}_i, \textbf{z} \rangle \cdot \langle \textbf{b}_i, \textbf{z} \rangle = \langle \textbf{c}_i, \textbf{z} \rangle$$ holds for all $$i$$ given fixed coefficients $$\textbf{a}, \textbf{b}, \textbf{c}$$. If we can do this without revealing $$\textbf{w}$$, and non-interactively with succinct proofs, we'll have a zk-SNARK.
