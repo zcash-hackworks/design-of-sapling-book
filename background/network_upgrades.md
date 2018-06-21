@@ -21,7 +21,7 @@ Overwinter also had some other changes to consensus rules:
 
 ### Sapling
 
-**Sapling** is a major network upgrade that is expected to activate in November 2018. The primary goal of this upgrade is to improve the performance of shielded addresses so that they can become ubiquitous in the ecosystem.
+**Sapling** is a major network upgrade that is expected to activate in October 2018. The primary goal of this upgrade is to improve the performance of shielded addresses so that they can become ubiquitous in the ecosystem.
 
 The Sapling upgrade includes:
 

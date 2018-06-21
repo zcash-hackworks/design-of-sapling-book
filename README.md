@@ -1,4 +1,4 @@
-This document is intended to be a technical overview of [Sapling](https://z.cash/upgrade/sapling.html), a major network upgrade for Zcash which is [slated to activate](https://z.cash/support/schedule.html) in November 2018.
+This document is intended to be a technical overview of [Sapling](https://z.cash/upgrade/sapling.html), a major network upgrade for Zcash which is [slated to activate](https://z.cash/support/schedule.html) in October 2018.
 
 * **This is not a user guide.** If you're a user or business, please refer to the [Sapling Upgrade](https://z.cash/upgrade/sapling.html) documentation instead.
 * **This is not a specification.** Please refer to the [Zcash Protocol Specification](https://github.com/zcash/zips/blob/master/protocol/sapling.pdf) and [ZIP243](https://github.com/zcash/zips/blob/master/zip-0243.rst) for a more thorough description of the changes involved in the Sapling upgrade.

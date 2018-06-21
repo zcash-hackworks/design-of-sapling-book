@@ -3,7 +3,7 @@
 * [Background](README.md)
     * [Network Upgrades](background/network_upgrades.md)
     * [Zerocash](background/zerocash.md)
-* [Transaction Design](http)
+* [Transaction Design](transaction_design.md)
 * [Payment Addresses](http)
 * [Notes](http)
 * [Nullifiers](http)
