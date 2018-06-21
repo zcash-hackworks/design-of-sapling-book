@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [zk-SNARKs](zksnarks/README.md)
     * [BLS12-381](zksnarks/bls12_381.md)
+    * [Rank-1 Constraint Systems](zksnarks/r1cs.md)
     * [Quadratic Arithmetic Programs](zksnarks/qaps.md)
     * [Groth16](zksnarks/groth16.md)
     * [Parameter Generation](zksnarks/paramgen.md)
