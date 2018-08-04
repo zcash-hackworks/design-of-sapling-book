@@ -9,6 +9,7 @@
     * [Zerocash](background/zerocash.md)
 * [BLS12-381](bls12_381.md)
 * [zk-SNARKs](zksnarks/README.md)
+    * [QAPs](zksnarks/qaps.md)
 	* [R1CS and QAPs](zksnarks/r1cs_and_qaps.md)
 	* [Groth16](zksnarks/groth16.md)
 	* [Parameter Generation](zksnarks/paramgen.md)
